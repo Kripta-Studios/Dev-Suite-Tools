@@ -1,4 +1,8 @@
+#! /usr/bin/python3
+
 def installAll():
+    import time, colorama, os, sys
+
     print(colorama.Fore.CYAN +"The following programs are going to install:\n" + colorama.Fore.GREEN + " · VIM: Vim is an improved version of the Vi text editor, present on all UNIX systems.")
     input("PRESS ENTER TO CONTINUE...")
     print(colorama.Fore.RED +" · GVIM: It is an open source program released under the GNU license. It is a graphic version of the Vim text editor.")
@@ -113,17 +117,22 @@ def dependenciesInstaller():
 
     if rect == '' or rect == 'S' or rect == 's' or rect == 'Y' or rect == 'y':
         print("Installing all necesary dependencies. . .")
-        os.system("sudo pip3 install colorama && sudo pip3 install random && sudo pip3 install time") 
+        os.system("sudo pip3 install colorama") #&& sudo pip3 install random && sudo pip3 install time") 
         '''
         import colorama, time
         print(colorama.Fore.RED + "\nDone. Now start the installation of your suite. . .\n")
         time.sleep(2)
         install()'''
+
+        main2()
     else:
         print("\n\n")
         sys.exit()
 
+
 def VIM():
+    import time, colorama, os, sys
+
     print(colorama.Fore.GREEN + " · VIM: Vim is an improved version of the Vi text editor, present on all UNIX systems.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -149,6 +158,8 @@ def VIM():
     str(input(''))
 
 def GVIM():
+    import time, colorama, os, sys
+
     print(colorama.Fore.RED +" · GVIM: It is an open source program released under the GNU license. It is a graphic version of the Vim text editor.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -175,6 +186,8 @@ def GVIM():
 
 
 def VSCODE():
+    import time, colorama, os, sys
+
     print(colorama.Fore.GREEN +" · VSCode: Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -205,6 +218,8 @@ def VSCODE():
 
 
 def CODEBLOCKS():
+    import time, colorama, os, sys
+
     print(colorama.Fore.MAGENTA +" · Code::Blocks: Code :: Blocks is an open source integrated development environment, supporting multiple compilers, including GCC, Clang, and Visual C ++.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -234,6 +249,8 @@ def CODEBLOCKS():
 
 
 def GCC():
+    import time, colorama, os, sys
+
     print(colorama.Fore.BLUE +" · GCC + G++: The GNU Compiler Collection is a set of compilers created by the GNU project.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -260,6 +277,8 @@ def GCC():
 
 
 def MICRO():
+    import time, colorama, os, sys
+
     print(colorama.Fore.WHITE +" · Micro Text Editor: micro a modern and intuitive terminal-based text editor")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -287,6 +306,8 @@ def MICRO():
 
 
 def TOR():
+    import time, colorama, os, sys
+
     print(colorama.Fore.CYAN +" · Tor Web Browser: Tor is a project whose main objective is the development of a distributed low-latency communications network superimposed on the internet.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -315,6 +336,8 @@ def TOR():
 
 
 def GOOGLE():
+    import time, colorama, os, sys
+    
     print(colorama.Fore.RED +" · Chrome Web Browser: Google Chrome is a closed source web browser developed by Google, although derived from open source projects.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -342,6 +365,8 @@ def GOOGLE():
     str(input(''))
 
 def GIMP():
+    import time, colorama, os, sys
+
     print(colorama.Fore.GREEN +" · GIMP: Gimp is a digital image editing program in the form of a bitmap, both drawings and photographs. It is a free and free program.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -369,6 +394,8 @@ def GIMP():
 
 
 def WINE():
+    import time, colorama, os, sys
+
     print(colorama.Fore.MAGENTA +" · WINE: Wine is a reimplementation of the Win16 and Win32 application programming interface for Unix-based operating systems.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -395,6 +422,8 @@ def WINE():
 
 
 def BLENDER():
+    import time, colorama, os, sys
+
     print(colorama.Fore.BLUE +" · Blender: Blender is a multi-platform computer program, especially dedicated to modeling, lighting, rendering, animating, and creating 3D graphics.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -421,6 +450,8 @@ def BLENDER():
 
 
 def AUDACITY():
+    import time, colorama, os, sys
+    
     print(colorama.Fore.WHITE +" · Audacity: Audacity is a free cross-platform computer application, which can be used for audio recording and editing, distributed under the GPLv2 license.")
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -447,6 +478,8 @@ def AUDACITY():
 
 
 def GIT():
+    import time, colorama, os, sys
+
     print(colorama.Fore.RED + " · Git: Git is a version control software designed by Linus Torvalds, thinking about the efficiency and reliability of application version maintenance.") 
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -539,9 +572,75 @@ def main():
 
     except:
         dependenciesInstaller()
-        main()
 
 
 
+def main2():
+    import os, sys, colorama, time, random
+    try:
+        if sys.argv[1].lower() == "install":
+            install = sys.argv[1].lower() == "install"
+            lenght = len(sys.argv) == 3
+
+            if install and sys.argv[2].lower() == "all" and lenght:
+                argvAll()
+
+            elif install and sys.argv[2].lower() == "vim" and lenght:
+                VIM()
+
+            elif install and sys.argv[2].lower() == "gvim" and lenght:
+                GVIM()
+
+            elif install and sys.argv[2].lower() == "vscode" and lenght:
+                VSCODE()
+
+            elif install and sys.argv[2].lower() == "codeblocks" and lenght:
+                CODEBLOCKS()
+            
+            elif install and sys.argv[2].lower() == "gccg++" and lenght:
+                GCC()
+            
+            elif install and sys.argv[2].lower() == "micro" and lenght:
+                MICRO()
+            
+            elif install and sys.argv[2].lower() == "tor" and lenght:
+                TOR()
+            
+            elif install and sys.argv[2].lower() == "chrome" and lenght:
+                GOOGLE()
+            
+            elif install and sys.argv[2].lower() == "gimp" and lenght:
+                GIMP()
+
+            elif install and sys.argv[2].lower() == "audacity" and lenght:
+                AUDACITY()
+            
+            elif install and sys.argv[2].lower() == "wine" and lenght:
+                WINE()
+            
+            elif install and sys.argv[2].lower() == "blender" and lenght:
+                BLENDER()
+            
+            elif install and sys.argv[2].lower() == "git" and lenght:
+                GIT()
+            elif install and sys.argv[2].lower() != "git" or sys.argv[2].lower() != "blender" or sys.argv[2].lower() != "wine" or sys.argv[2].lower() != "audacity" or sys.argv[2].lower() != "gimp" or sys.argv[2].lower() != "chrome" or sys.argv[2].lower() != "tor" or sys.argv[2].lower() != "micro" or sys.argv[2].lower() != "all" or sys.argv[2].lower() != "gccg++" or sys.argv[2].lower() != "codeblocks" or sys.argv[2].lower() != "vscode" or sys.argv[2].lower() != "gvim" or sys.argv[2].lower() != "vim" and lenght:
+                print("That program it's not now available. The programs availables now are:")
+                print("VIM               |         devSuite install vim")
+                print("GVIM              |         devSuite install gvim")
+                print("VSCode            |         devSuite install vscode")
+                print("Code::Blocks      |         devSuite install codeblocks")
+                print("GCC and G++       |         devSuite install gccg++")
+                print("Micro Text Editor |         devSuite install micro")
+                print("TOR Web Browser   |         devSuite install tor")
+                print("Google Chrome     |         devSuite install chrome")
+                print("GIMP              |         devSuite install gimp")
+                print("Audacity          |         devSuite install audacity")
+                print("WINE              |         devSuite install wine")
+                print("Blender           |         devSuite install blender")
+                print("Git               |         devSuite install git")
+                print("All the programs  |         devSuite install all")
+
+    except:
+        print("For now you must use this syntax: devSuite install <pkg>")
 
 main()
