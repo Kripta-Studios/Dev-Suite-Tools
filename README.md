@@ -23,7 +23,7 @@ Dev-Suite-Tools is a simple program in Python3 that provide an easy installation
 * To download the repo type: `git clone https://github.com/Kripta-Studios/Dev-Suite-Tools.git`
 * Then move to the directory that you downloaded: `cd Dev-Suite-Tools\scripts`
 * Then execute as root: `chmod +x ./install.sh && ./install.sh`
-* Then run: `devSuite install all` 
+* Then run: `devSuite install <pkg>` 
 
 ### Important information:
 Right now the application is only available for Debian based systems.
