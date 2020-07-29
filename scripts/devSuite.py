@@ -554,7 +554,7 @@ def main():
         elif install and sys.argv[2].lower() == "git" and lenght:
             GIT()
         elif install and sys.argv[2].lower() != "git" or sys.argv[2].lower() != "blender" or sys.argv[2].lower() != "wine" or sys.argv[2].lower() != "audacity" or sys.argv[2].lower() != "gimp" or sys.argv[2].lower() != "chrome" or sys.argv[2].lower() != "tor" or sys.argv[2].lower() != "micro" or sys.argv[2].lower() != "all" or sys.argv[2].lower() != "gccg++" or sys.argv[2].lower() != "codeblocks" or sys.argv[2].lower() != "vscode" or sys.argv[2].lower() != "gvim" or sys.argv[2].lower() != "vim" and lenght:
-            print("That program it's not now available. The programs availables now are:")
+            print("That program it's not now available. The programs availables now are:\n")
             print("VIM               |         devSuite install vim")
             print("GVIM              |         devSuite install gvim")
             print("VSCode            |         devSuite install vscode")
