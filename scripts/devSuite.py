@@ -32,7 +32,7 @@ def installAll():
 
     os.system("clear")
     print(colorama.Fore.RED + "UPDATING REPOSITORIES AND PROGRAMS. . .")
-    os.system("sudo apt update && sudo apt upgrade")
+    os.system("sudo apt update -y && sudo apt upgrade -y")
     print(colorama.Fore.BLUE +"UPDATE and UPGRADE succesfully finished.")
     time.sleep(1.5)
     print(colorama.Fore.GREEN +"Installing VIM. . .")
