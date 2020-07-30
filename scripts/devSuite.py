@@ -29,7 +29,9 @@ def installBasics():
     print(colorama.Fore.WHITE +" · Audacity: Audacity is a free cross-platform computer application, which can be used for audio recording and editing, distributed under the GPLv2 license.")
     input("PRESS ENTER TO CONTINUE...")
     print(colorama.Fore.RED + " · Git: Git is a version control software designed by Linus Torvalds, thinking about the efficiency and reliability of application version maintenance.")
-    str(input("\nEnter to continue. . ."))
+    input("PRESS ENTER TO CONTINUE...")
+    print(colorama.Fore.RED + " · Steam: Steam is a digital video game distribution platform developed by Valve Corporation.")
+    input("PRESS ENTER TO CONTINUE...")
 
     os.system("clear")
     print(colorama.Fore.RED + "UPDATING REPOSITORIES AND PROGRAMS. . .")
@@ -138,8 +140,8 @@ def installAll():
     input("PRESS ENTER TO CONTINUE...")
     print(colorama.Fore.WHITE +" · Audacity: Audacity is a free cross-platform computer application, which can be used for audio recording and editing, distributed under the GPLv2 license.")
     input("PRESS ENTER TO CONTINUE...")
-    print(colorama.Fore.RED + " · Git: Git is a version control software designed by Linus Torvalds, thinking about the efficiency and reliability of application version maintenance.")
-    str(input("\nEnter to continue. . ."))
+    print(colorama.Fore.RED + " · Steam: Steam is a digital video game distribution platform developed by Valve Corporation.")
+    input("PRESS ENTER TO CONTINUE...")
 
     os.system("clear")
     print(colorama.Fore.RED + "UPDATING REPOSITORIES AND PROGRAMS. . .")
