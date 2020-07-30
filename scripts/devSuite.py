@@ -84,6 +84,11 @@ def installAll():
     print(colorama.Fore.GREEN +"Installing GIT. . .")
     os.system("apt install git -y")
     time.sleep(1.5)
+    print(colorama.Fore.MAGENTA + "Installing Steam. . .")
+    os.system("add-apt-repository multiverse")
+    os.system("apt update -y && apt upgrade -y")
+    os.system("apt install steam")
+    time.sleep(1.5)
     print("Finishing the installation. . .")
     os.system("apt update -y && apt upgrade -y")
     os.system("rm google-chrome-stable_current_amd64.deb")
@@ -100,7 +105,7 @@ def installAll():
     str(input(''))
     
     infoFile = open("DownloadedPrograms.doc","w+")
-    infoFile.write("The following programs are going to install:\n\nVIM: Vim is an improved version of the Vi text editor, present on all UNIX systems.\n\nGVIM: It is an open source program released under the GNU license. It is a graphic version of the Vim text editor.\n\nVSCode: Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS.\n\nCode::Blocks: Code :: Blocks is an open source integrated development environment, supporting multiple compilers, including GCC, Clang, and Visual C ++.\n\nGCC + G++: The GNU Compiler Collection is a set of compilers created by the GNU project.\nMicro Text Editor: micro a modern and intuitive terminal-based text editor.\n\nTor Web Browser: Tor is a project whose main objective is the development of a distributed low-latency communications network superimposed on the internet.\n\nChrome Web Browser: Google Chrome is a closed source web browser developed by Google, although derived from open source projects.\n\nGIMP: Gimp is a digital image editing program in the form of a bitmap, both drawings and photographs. It is a free and free program.\n\nWINE: Wine is a reimplementation of the Win16 and Win32 application programming interface for Unix-based operating systems.\n\nBlender: Blender is a multi-platform computer program, especially dedicated to modeling, lighting, rendering, animating, and creating 3D graphics.\n\nAudacity: Audacity is a free cross-platform computer application, which can be used for audio recording and editing, distributed under the GPLv2 license.\n\nGit: Git is a version control software designed by Linus Torvalds, thinking about the efficiency and reliability of application version maintenance.\n\nDeveloped by Kripta Studios 2020")
+    infoFile.write("The following programs are going to install:\n\nVIM: Vim is an improved version of the Vi text editor, present on all UNIX systems.\n\nGVIM: It is an open source program released under the GNU license. It is a graphic version of the Vim text editor.\n\nVSCode: Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS.\n\nCode::Blocks: Code :: Blocks is an open source integrated development environment, supporting multiple compilers, including GCC, Clang, and Visual C ++.\n\nGCC + G++: The GNU Compiler Collection is a set of compilers created by the GNU project.\nMicro Text Editor: micro a modern and intuitive terminal-based text editor.\n\nTor Web Browser: Tor is a project whose main objective is the development of a distributed low-latency communications network superimposed on the internet.\n\nChrome Web Browser: Google Chrome is a closed source web browser developed by Google, although derived from open source projects.\n\nGIMP: Gimp is a digital image editing program in the form of a bitmap, both drawings and photographs. It is a free and free program.\n\nWINE: Wine is a reimplementation of the Win16 and Win32 application programming interface for Unix-based operating systems.\n\nBlender: Blender is a multi-platform computer program, especially dedicated to modeling, lighting, rendering, animating, and creating 3D graphics.\n\nAudacity: Audacity is a free cross-platform computer application, which can be used for audio recording and editing, distributed under the GPLv2 license.\n\nGit: Git is a version control software designed by Linus Torvalds, thinking about the efficiency and reliability of application version maintenance.\nSteam: Steam is a digital video game distribution platform developed by Valve Corporation.\n\nDeveloped by Kripta Studios 2020")
     sys.exit()
 
 def argvAll():
@@ -505,6 +510,27 @@ def GIT():
     print(colorama.Fore.RESET +"Press enter to close this program. . .")
     str(input(''))
 
+def STEAM():
+    import time, colorama, os, sys
+
+    print(colorama.Fore.CYAN + " · Steam: Steam is a digital video game distribution platform developed by Valve Corporation.") 
+    input("PRESS ENTER TO CONTINUE...")
+    os.system("clear")
+    print(colorama.Fore.GREEN + "UPDATING REPOSITORIES AND PROGRAMS. . .")
+    os.system("sudo apt update -y && sudo apt upgrade -y")
+    print(colorama.Fore.BLUE +"UPDATE and UPGRADE succesfully finished.")
+    time.sleep(1.5)
+    print(colorama.Fore.MAGENTA +"Installing STEAM. . .")
+    os.system("add-apt-repository multiverse")
+    os.system("apt update -y && apt upgrade -y")
+    os.system("apt install steam")
+    time.sleep(1.5)
+    print("Finishing the installation. . .")
+    os.system("apt update -y && apt upgrade -y")
+    os.system("apt autoclean")
+    os.system("apt autoremove")
+    time.sleep(2)
+    input("Press ENTER. . .")
 
 def main():
     try:
@@ -554,7 +580,11 @@ def main():
         
         elif install and sys.argv[2].lower() == "git" and lenght:
             GIT()
-        elif install and sys.argv[2].lower() != "git" or sys.argv[2].lower() != "blender" or sys.argv[2].lower() != "wine" or sys.argv[2].lower() != "audacity" or sys.argv[2].lower() != "gimp" or sys.argv[2].lower() != "chrome" or sys.argv[2].lower() != "tor" or sys.argv[2].lower() != "micro" or sys.argv[2].lower() != "all" or sys.argv[2].lower() != "gccg++" or sys.argv[2].lower() != "codeblocks" or sys.argv[2].lower() != "vscode" or sys.argv[2].lower() != "gvim" or sys.argv[2].lower() != "vim" and lenght:
+
+        elif install and sys.argv[2].lower() == "steam" and lenght:
+            STEAM()
+
+        elif install and sys.argv[2].lower() != "git" or sys.argv[2].lower() != "blender" or sys.argv[2].lower() != "wine" or sys.argv[2].lower() != "audacity" or sys.argv[2].lower() != "gimp" or sys.argv[2].lower() != "chrome" or sys.argv[2].lower() != "tor" or sys.argv[2].lower() != "micro" or sys.argv[2].lower() != "all" or sys.argv[2].lower() != "gccg++" or sys.argv[2].lower() != "codeblocks" or sys.argv[2].lower() != "vscode" or sys.argv[2].lower() != "gvim" or sys.argv[2].lower() != "vim" and lenght or sys.argv[2].lower() != "steam" and lenght:
             print("That program it's not now available. The programs availables now are:\n")
             print("VIM               |         devSuite install vim")
             print("GVIM              |         devSuite install gvim")
@@ -569,6 +599,7 @@ def main():
             print("WINE              |         devSuite install wine")
             print("Blender           |         devSuite install blender")
             print("Git               |         devSuite install git")
+            print("Steam             |         devSuite install steam")
             print("All the programs  |         devSuite install all")
 
     except:
@@ -624,7 +655,11 @@ def main2():
             
             elif install and sys.argv[2].lower() == "git" and lenght:
                 GIT()
-            elif install and sys.argv[2].lower() != "git" or sys.argv[2].lower() != "blender" or sys.argv[2].lower() != "wine" or sys.argv[2].lower() != "audacity" or sys.argv[2].lower() != "gimp" or sys.argv[2].lower() != "chrome" or sys.argv[2].lower() != "tor" or sys.argv[2].lower() != "micro" or sys.argv[2].lower() != "all" or sys.argv[2].lower() != "gccg++" or sys.argv[2].lower() != "codeblocks" or sys.argv[2].lower() != "vscode" or sys.argv[2].lower() != "gvim" or sys.argv[2].lower() != "vim" and lenght:
+
+            elif install and sys.argv[2].lower() == "steam" and lenght:
+                STEAM()
+
+            elif install and sys.argv[2].lower() != "git" or sys.argv[2].lower() != "blender" or sys.argv[2].lower() != "wine" or sys.argv[2].lower() != "audacity" or sys.argv[2].lower() != "gimp" or sys.argv[2].lower() != "chrome" or sys.argv[2].lower() != "tor" or sys.argv[2].lower() != "micro" or sys.argv[2].lower() != "all" or sys.argv[2].lower() != "gccg++" or sys.argv[2].lower() != "codeblocks" or sys.argv[2].lower() != "vscode" or sys.argv[2].lower() != "gvim" or sys.argv[2].lower() != "vim" and lenght or sys.argv[2].lower() != "steam" and lenght:
                 print("That program it's not now available. The programs availables now are:")
                 print("VIM               |         devSuite install vim")
                 print("GVIM              |         devSuite install gvim")
@@ -639,6 +674,7 @@ def main2():
                 print("WINE              |         devSuite install wine")
                 print("Blender           |         devSuite install blender")
                 print("Git               |         devSuite install git")
+                print("Steam             |         devSuite install steam")
                 print("All the programs  |         devSuite install all")
 
     except:
