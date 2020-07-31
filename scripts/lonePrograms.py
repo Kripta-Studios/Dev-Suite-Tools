@@ -413,11 +413,17 @@ def STEAM():
     time.sleep(2)
     input("Press ENTER. . .")
 
+    os.system("clear")
+    print("Installation finished. Comprobe all the programs, you have a list of the installed programs in this directory. If any program don't run or aren't install report it.")
+    print(colorama.Fore.RED +"Kripta Studios made this program.")
+    time.sleep(2)
+    print(colorama.Fore.RESET +"Press enter to close this program. . .")
+    str(input(''))
 ############################################################################################################################################################################################################
 
 def VLC():
     import time, colorama, os, sys
-
+    
     print(colorama.Fore.WHITE + " · VLC media player is a free and open source multimedia player and framework developed by the VideoLAN project.") 
     input("PRESS ENTER TO CONTINUE...")
     os.system("clear")
@@ -436,4 +442,10 @@ def VLC():
     time.sleep(2)
     input("Press ENTER. . .")
 
+    os.system("clear")
+    print("Installation finished. Comprobe all the programs, you have a list of the installed programs in this directory. If any program don't run or aren't install report it.")
+    print(colorama.Fore.RED +"Kripta Studios made this program.")
+    time.sleep(2)
+    print(colorama.Fore.RESET +"Press enter to close this program. . .")
+    str(input(''))
 ############################################################################################################################################################################################################
