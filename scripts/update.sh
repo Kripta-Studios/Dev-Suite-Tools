@@ -7,5 +7,6 @@ sudo rm /usr/bin/devsuite
 git clone https://github.com/Kripta-Studios/Dev-Suite-Tools.git
 sudo chmod a+x Dev-Suite-Tools/scripts/install.sh
 cd Dev-Suite-Tools/scripts/
+mkdir tmp
 sudo ./install.sh
 echo Dev-Suite-Tools upgrade succesfully.
