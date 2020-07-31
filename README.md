@@ -17,6 +17,8 @@ Dev-Suite-Tools is a simple program in Python3 that provide an easy installation
 | WINE   | `devSuite install wine`        | 
 | Blender   | `devSuite install blender`        | 
 | Git   | `devSuite install git`        | 
+| Steam   | `devSuite install steam`        | 
+| Vlc   | `devSuite install vlc`        | 
 | All the programs   | `devSuite install all`        | 
 
 ### Installation guide
