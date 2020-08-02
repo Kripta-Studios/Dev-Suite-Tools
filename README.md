@@ -30,4 +30,9 @@ Dev-Suite-Tools is a simple program in Python3 that provide an easy installation
 ### Important information:
 Right now the application is only available for Debian based systems.
 
+### Collaborate:
+All the help is great in this project, but also it's a so simple project. If you're a beginner maybe you will learn a lot, else maybe you became bored in this project. The three only requirements to participate are: know how to use git (and git with VS Code), know the programming language Python and respect the decisions and orders of the project manager. 
+
+If you meet these requirements you're welcome. In the next month here will appear a index about the steps that the project will follow. 
+
 #### Made by Jinsku Kripta from Kripta Studios
