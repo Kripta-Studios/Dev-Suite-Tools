@@ -14,7 +14,7 @@ if ping -q -c 1 -W 1 google.com >/dev/null; then
   echo Dev-Suite-Tools upgrade succesfully.
 
 else
-  echo "The network is down"
+  echo "The network is down unable to update . . ."
 fi
 
 
