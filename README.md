@@ -1,4 +1,7 @@
 # Dev-Suite-Tools
+
+### _Current Version: BETA 2.0.1_
+
 Dev-Suite-Tools is a simple program in Python3 that provide an easy installation for the basics tools for a software dev.
 ### The programs availables now are: 
 
